@@ -19,28 +19,70 @@
     }
 
     // Regular
+    console.log('hello');
 
     // Interpolated
+    console.log('Hello I am a %s string!', '💩'); // put second paramter in %s
 
     // Styled
+    // console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue') 
+    // set second paramter style in %c
 
     // warning!
+    console.warn('OH NOOO');  //yellow warning label on console
 
     // Error :|
+    console.error('Shit!'); //red error label on console
 
     // Info
+    console.info('Crocodiles eat 3-4 people per year'); //info text
 
     // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');  
+    //show second paramter text as error only when first parmater statement is false
 
     // clearing
+   console.clear();  //clears console
 
     // Viewing DOM Elements
+    console.log(p);   //show p as dom element
+    console.dir(p);    //show p as dom properties 
+
+    console.clear();
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`); // or group() for an open group
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    }); //groups object items in console; ( bracket must be same text on start and end)
+
 
     // counting
 
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    //count number of times "text" is log to console
+
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/coded-by-mj')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });//check time a statement or function takes to complete;( bracket must have same text on time and time end )
+
+    console.table(dogs);  //set array of objects as table;
+ 
+
 
   </script>
 </body>
