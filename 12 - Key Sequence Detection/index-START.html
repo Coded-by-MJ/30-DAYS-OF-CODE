@@ -7,6 +7,23 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <script></script>
+    <script>
+        const pressed = [];
+      const secretCode = "justice";
+
+      window.addEventListener("keyup", (e) => {
+        console.log(e.key);
+        pressed.push(e.key);
+        pressed.splice(
+          -secretCode.length - 1, //secretCode.length = 7; (-7 - 1) = -8; splice start position is -8 counting backwards from the end of array
+          pressed.length - secretCode.length //if pressed.length is less than secretCode.length nothing happens because number of elements to be removed is negative;
+        ); //once pressed.length is greater than secretCode.length eg: (8 - 7) = 1; one element is removed from start position;
+        if (pressed.join("").includes(secretCode)) {
+          console.log("DING DING!");
+          cornify_add();
+        }
+         console.log(pressed);
+      });
+    </script>
   </body>
 </html>
