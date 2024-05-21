@@ -11,7 +11,7 @@
 I observe the functionality and then try to recreate the code myself without looking at the prewritten Javascript code;
 
 ## Original Code
-- 6 out of 30 projects
+- 7 out of 30 projects
 
 
 
