@@ -29,15 +29,24 @@
       .map(result => result.transcript)
       .join('');
 
-      console.log(transcript);
+      const poopScript = transcript.replace(/star|stars/gi, '⭐');
+      p.textContent = poopScript;
+
+      // p.textContent = transcript;
+
+      if (e.results[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+      }
+      // console.log(transcript);
 
   
    });
 
 
-  //  recognition.addEventListener('end', recognition.start);
+   recognition.addEventListener('end', recognition.start);
 
-   recognition.start();
+  recognition.start();
 
 
 
