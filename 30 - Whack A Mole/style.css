@@ -18,6 +18,7 @@ h1 {
   text-align: center;
   font-size: 10rem;
   line-height: 1;
+  margin-top: 50px;
   margin-bottom: 0;
 }
 
@@ -66,4 +67,52 @@ h1 {
 
 .hole.up .mole {
   top: 0;
+}
+
+
+.controls{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.controls > button, .select-field{
+   width: 80px;
+   height: 40px;
+   text-align: center;
+   font-size: 25px;
+   display: flex;
+   font-weight: 800;
+   justify-content: center;
+   align-items: center;
+   font-family: inherit;
+}
+
+.select-field{
+  gap: 5px;
+
+}
+
+.select-field > select{
+   height: 100%;
+   font-size: 25px;
+   font-weight: 800;
+   font-family: inherit;
+}
+
+
+.select-field > label, .high-score {
+   font-size: 25px;
+   font-weight: 800;
+}
+
+
+
+.high-score{
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
 }
